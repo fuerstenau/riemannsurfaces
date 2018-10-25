@@ -1,0 +1,60 @@
+%%% Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Common sets
+\newcommand{\N}{\mathds{N}} % Natural numbers
+\newcommand{\Z}{\mathds{Z}} % Integers
+\newcommand{\Q}{\mathds{Q}} % Rationals
+\newcommand{\R}{\mathds{R}} % Reals
+% Overwriting a hyperref command
+% We do not know what it would have done
+\renewcommand{\C}{\mathds{C}} % Complex numbers
+
+% Common constants
+\newcommand{\e}{\mathrm{e}} % Euler's number, exp(1)
+\renewcommand{\i}{\mathrm{i}} % Imaginary unit
+
+% Common notations
+\newcommand{\abs}[1]{\left\vert#1\right\vert} % Absolute value
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm
+\newcommand{\Po}{\mathcal{P}} % Powerset
+
+% Environments for definitions, theorems etc.
+% All of these are numbered together within each chapter
+\swapnumbers % Numbers in front, e.g. “1.4 Theorem” instead of “Theorem 1.4”
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}[chapter]
+\newtheorem{bsp}[defi]{Example}
+\newtheorem{ex}[defi]{Exercise}
+
+\theoremstyle{plain}
+\newtheorem{thm}[defi]{Theorem}
+\newtheorem{prop}[defi]{Proposition}
+\newtheorem{lem}[defi]{Lemma}
+\newtheorem{cor}[defi]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{bem}[defi]{Remark}
+
+% Texty abbreviations
+\newcommand*\eg{e.g.\ }
+\newcommand*\ie{i.e.\ }
+
+% Semantic commands
+\newcommand*\defn[1]{\emph{#1}} % Definiendum
+
+% Useful commands
+\newcommand*\mailto[1]{\href{mailto:#1}{#1}}
+
+% Technical helpers
+\newcommand*\norml{}
+\newcommand*\normr{}
+\newcommand*\autol{\!\left}
+\newcommand*\autor{\right}
+\newcommand*\argl[1]{\csname #1l\endcsname}
+\newcommand*\argr[1]{\csname #1r\endcsname}
+
+\makeatletter
+\newcommand*\setter[1]{\def\@setter{#1}}
+\newcommand*\lecturer[1]{\def\@lecturer{#1}}
+\newcommand*\notetaker[1]{\def\@notetaker{#1}}
+\makeatother

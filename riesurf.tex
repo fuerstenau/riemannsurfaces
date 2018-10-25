@@ -1,0 +1,75 @@
+\documentclass{scrbook}
+
+%%% Sane encodings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%%% Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{packages}
+
+%%% Configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create an index
+\usepackage{makeidx}
+\makeindex
+
+\hypersetup{
+	% Encode PDF strings in Unicode, not ASCII
+	unicode,
+}
+
+% All graphics should be in img/
+\graphicspath{{img/}}
+
+%%% Looks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\KOMAoption{fontsize}{12pt}
+\KOMAoption{paper}{A4}
+\KOMAoption{twoside}{true}
+
+% Do not number sections and do not put them into the table of contents
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+% The length is the binding correction,
+% i.e. the amount of paper lost when binding the printed version
+% TODO: Set a reasonable BCOR
+\typearea[0cm]{calc}
+
+\hypersetup{
+	% Do not draw boxes around links, colour them
+	colorlinks,
+}
+
+%%% Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{commands}
+
+%%% Metadata %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Riemann Surfaces}
+\lecturer{Brice Loustau}
+\notetaker{Daria Zierau}
+\setter{Peter Fürstenau}
+\makeatletter
+\hypersetup{
+	pdfauthor=\@setter,
+	pdftitle=\@title,
+}
+\makeatother
+
+\begin{document}
+\frontmatter
+\pagenumbering{Roman}
+\include{titlepage}
+
+\cleardoublepage
+\tableofcontents
+
+\mainmatter
+\pagenumbering{arabic}
+
+\cleardoublepage
+
+\backmatter
+\clearpage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\end{document}

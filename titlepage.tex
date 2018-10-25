@@ -1,0 +1,41 @@
+\makeatletter
+\begin{titlepage}
+% Actually center on the page,
+% not the later text area
+\KOMAoption{twoside}{semi}
+\recalctypearea
+\centering
+
+	\includegraphics[width=0.5\linewidth]{TU_Darmstadt_Logo}
+
+\vspace{1cm}
+
+	\includegraphics[width=0.5\linewidth]{FB_Mathematik_Logo}
+
+\vspace{3.5cm}
+
+	{\Huge\usekomafont{title} \@title}
+
+\vspace{0.5cm}
+
+	{\usekomafont{subtitle} Winter Term 2018/2019}
+
+\vspace{0.5cm}
+
+	{\usekomafont{author} Lecture held by \@lecturer}
+
+\vspace{1.0cm}
+
+	\begingroup
+	\usekomafont{author}
+	\small
+	Typeset in \LaTeX\ by \@setter\\
+	Based on lecture notes taken by \@notetaker\\
+	Errors can be reported at \mailto{fuerstenau@mathematik.tu-darmstadt.de}
+	\endgroup
+
+\vfill
+
+	{\usekomafont{date}\small Version of \today}
+\end{titlepage}
+\makeatother

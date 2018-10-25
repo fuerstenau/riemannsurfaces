@@ -1,0 +1,22 @@
+language: perl # We need perl anyway for installing TeX Live
+
+install:
+- cd texlive; ./install_tl.sh; cd ..
+- export PATH=./texlive/texlive/bin/x86_64-linux:$PATH
+
+cache:
+  directories:
+  - ./build
+  - ./texlive/texlive
+
+script:
+- latexmk -pdf --outdir=build --auxdir=build --interaction=nonstopmode --halt-on-error stopro.tex
+- mv build/stopro.pdf page/
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: page
+  on:
+    branch: master
