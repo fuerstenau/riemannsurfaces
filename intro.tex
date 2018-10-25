@@ -1,0 +1,29 @@
+\chapter{Introduction}
+
+\section{What is a Riemann Surface?}
+
+\begin{defi}
+	A \defn{Riemann Surface} (RS) is a one-dimensional complex manifold.
+
+	A \defn{manifold} is a topological space
+	which is Hausdorff, second-countable and locally Euclidean
+	together with an atlas \(\mathcal A\)
+	of charts \(\alpha = (\U\alpha, \uphi\alpha)\)
+	consisting of an open set \(\U\alpha\)
+	and a homeomorphism
+	\[\uphi\alpha\colon \U\alpha \to \R^n\]
+	each and
+	covering \(M = \bigcup_\alpha \U\alpha\).
+
+	When the \defn{transition maps}
+	\begin{align*}
+		\trans\alpha\beta
+		\coloneqq \uphi\beta\circ{\uphi\alpha}^{-1}
+		\colon
+		    \uphi\alpha[\U\alpha\cap\U\beta]
+	        \to \uphi\beta [\U\alpha\cap\U\beta]
+	\end{align*}
+	are all in a class
+	\(C \subseteq \{f\colon U \to \R^n \:\vert\: U \subsetopen \R^n\}\),
+	we call \((M, \mathcal A)\) a \(C\)-manifold.
+\end{defi}
