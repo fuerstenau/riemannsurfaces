@@ -10,8 +10,8 @@ cache:
   - ./texlive/texlive
 
 script:
-- latexmk -pdf --outdir=build --auxdir=build --interaction=nonstopmode --halt-on-error stopro.tex
-- mv build/stopro.pdf page/
+- latexmk -pdf --outdir=build --auxdir=build --interaction=nonstopmode --halt-on-error riesurf.tex
+- mv build/riesurf.pdf page/
 
 deploy:
   provider: pages
