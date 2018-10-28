@@ -2,9 +2,9 @@
 
 \section{What is a Riemann Surface?}
 
-\begin{defi}
-	A \defn{Riemann Surface} (RS) is a one-dimensional complex manifold.
+A \RS is a one-dimensional complex manifold.
 
+\begin{defi}
 	A \defn{manifold} is a topological space
 	which is Hausdorff, second-countable and locally Euclidean
 	together with an atlas \(\mathcal A\)
@@ -13,7 +13,7 @@
 	and a homeomorphism
 	\[\uphi\alpha\colon \U\alpha \to \R^n\]
 	each and
-	covering \(M = \bigcup_\alpha \U\alpha\).
+	such that \(M = \bigcup_\alpha \U\alpha\) is covered.
 
 	When the \defn{transition maps}
 	\begin{align*}
@@ -27,3 +27,93 @@
 	\(C \subseteq \{f\colon U \to \R^n \:\vert\: U \subsetopen \R^n\}\),
 	we call \((M, \mathcal A)\) a \(C\)-manifold.
 \end{defi}
+
+By identifying \(\R^2 = \C\)
+and setting
+\[\Hol \coloneqq \{f\colon U \to \C \:\vert\: \text{\(U \subsetopen \C\), \(f\) holomorphic}\}\]
+we obtain the definition of a \RS.
+
+\begin{defi}
+	A \defn{\RS} is a \(\Hol\)-manifold.
+\end{defi}
+
+\begin{rem}
+	Since we have
+	\(\Hol \subset \{f \in \smooth(U, \R^2) \:\vert\: U \subsetopen \R^2\}\),
+	any \RS is a smooth two-dimensional real manifold,
+	\ie a surface.
+\end{rem}
+
+\begin{bsp}
+We give a few, increasingly complex (pun intended)
+examples and constructions for \RSs.
+\begin{itemize}
+\item \(\C\) is a \RS.
+\item Any open subset \(U \subsetopen M\) of a \RS \(M\) is a \RS itself.
+\item The Riemann Sphere \(\hat\C = \C \cup \{\infty\}\) is a \RS.
+\item Suitable quotients of \RSs are \RSs,
+	\eg the Torus \(\C / (\Z + \i\Z)\).
+\item We can associate \RSs to holomorphic functions.
+	For example,
+	we would like to define the natural logarithm
+	of any \(z = r\e^{\i\theta} \neq 0\)
+	with \(r > 0\) and \(\theta \in \R\) by
+	\[
+		\ln(z)
+		= \ln(r\e^{\i\theta})
+		= \ln(r) + \ln(\e^{\i\theta})
+		= \ln(r) + \i\theta,
+	\]
+	However, there is a problem:
+	For any \(z \neq 0\),
+	the argument \(\theta\) is only well-defined modulo \(2\pi\).
+	Choosing any system of representatives
+	to obtain a total function \(\ln\colon \C^* \to \C\)
+	is neither natural nor will it ever lead to a continuous function.
+
+	This can be fixed in two ways.
+	For one, we can think of the logarithm as being multi-valued,
+	obtaining
+	\[
+		\ln(\i)
+		= \i\frac\pi2+2\pi\i\Z
+		= \left\{
+			\frac12\pi\i, \frac52\pi\i,
+			-\frac32\pi\i, \frac92\pi\i,
+			-\frac72\pi\i, \dots
+		\right\}.
+	\]
+	For the other,
+	we need \RSs to “unfold the complex plane”.
+\item Projective non-singular curves are \RSs.
+	For example, we can take the polynomial equation
+	\[y^2 = x^3+ax+b\]
+	with parameters \(a\) and \(b\)
+	and study the set of solutions \(S \subseteq \C^2 \subseteq \Proj\C2\),
+	where the latter is a holomorphic manifold of complex dimension \(2\).
+	In the language of algebraic geometry,
+	\(S\) is an algebraic subvariety of \(\Proj\C2\)
+	and whenever \(S\) has no singularities,
+	it is a \RS.
+\end{itemize}
+\end{bsp}
+
+To conclude our initial tour of \RSs,
+we consider alternative ways
+to look at or define this class of spaces.
+A \RS is a real surface with some extra structure.
+There are various way to characterize this extra structure:
+\begin{description}
+\item[As defined] The holomorphic structure can be given with an atlas.
+\item[Algebraically] Any compact \RS
+	corresponds to a non-singular projective curve.
+\item[Conformal] Two Riemannian metrics are considered conformal
+	it they only differ by a (pointwise) rescaling
+	or~-- equivalently~-- if they measure the same angles.
+	A \RS can be equivalently given
+	as a real surface together with a conformal class of Riemann metrics.
+\item[Hyperbolic] Using the Poincaré uniformization theorem,
+	it is possible to show
+	that “nearly all” Riemann surfaces are hyperbolic,
+	which means that they are quotients of the hyperbolic space \(\H^2\).
+\end{description}

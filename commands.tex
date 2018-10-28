@@ -1,26 +1,31 @@
 %%% Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Common sets
-\newcommand{\N}{\mathds{N}} % Natural numbers
-\newcommand{\Z}{\mathds{Z}} % Integers
-\newcommand{\Q}{\mathds{Q}} % Rationals
-\newcommand{\R}{\mathds{R}} % Reals
+\newcommand*\N{\mathds{N}} % Natural numbers
+\newcommand*\Z{\mathds{Z}} % Integers
+\newcommand*\Q{\mathds{Q}} % Rationals
+\newcommand*\R{\mathds{R}} % Reals
 % Overwriting a hyperref command
 % We do not know what it would have done
-\renewcommand{\C}{\mathds{C}} % Complex numbers
+\renewcommand*\C{\mathds{C}} % Complex numbers
 
 % Common constants
 \newcommand{\e}{\mathrm{e}} % Euler's number, exp(1)
 \renewcommand{\i}{\mathrm{i}} % Imaginary unit
 
 % Common notations
-\newcommand{\abs}[1]{\left\vert#1\right\vert} % Absolute value
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm
-\newcommand{\Po}{\mathcal{P}} % Powerset
+\newcommand*\abs[1]{\left\vert#1\right\vert} % Absolute value
+\newcommand*\norm[1]{\left\lVert#1\right\rVert} % Norm
+\newcommand*\Po{\mathcal{P}} % Powerset
+\newcommand*\Hol{\mathcal{H}} % Holomorphic functions
+\renewcommand*\subset{\subseteq} % Sensible subset
+\newcommand*\smooth{\mathrm{C}^\infty}
+\newcommand*\Proj[2]{{#1}\mathrm{P}^{#2}}
 
 % Geometric notations
 \newcommand*\trans[2]{\textup{t}_{#1, #2}}
 \newcommand*\subsetopen{\subseteq_{\textnormal{open}}}
+\renewcommand*\H{\mathds{H}} % Hyperbolic spaces
 
 % Environments for definitions, theorems etc.
 % All of these are numbered together within each chapter
@@ -37,11 +42,13 @@
 \newtheorem{cor}[defi]{Corollary}
 
 \theoremstyle{remark}
-\newtheorem{bem}[defi]{Remark}
+\newtheorem{rem}[defi]{Remark}
 
 % Texty abbreviations
 \newcommand*\eg{e.g.\ }
 \newcommand*\ie{i.e.\ }
+\newcommand*\RS{Riemann Surface\xspace}
+\newcommand*\RSs{Riemann Surfaces\xspace}
 
 % Semantic commands
 \newcommand*\defn[1]{\emph{#1}} % Definiendum
