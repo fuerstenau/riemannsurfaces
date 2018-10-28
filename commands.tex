@@ -52,7 +52,9 @@
 \newcommand*\RSs{Riemann Surfaces\xspace}
 
 % Semantic commands
-\newcommand*\defn[1]{\emph{#1}} % Definiendum
+\makeatletter
+\newcommand*\defn[2][\@tempa]{\def\@tempa{#2}\emph{#2}\index{#1}} % Definiendum
+\makeatother
 
 % Useful commands
 \newcommand*\mailto[1]{\href{mailto:#1}{#1}}
