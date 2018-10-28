@@ -1,6 +1,6 @@
 \chapter{Introduction}
 
-\section{What is a Riemann Surface?}
+\section{What is a \RS?}
 
 A \RS is a one-dimensional complex manifold.
 
@@ -30,34 +30,46 @@ A \RS is a one-dimensional complex manifold.
 
 By identifying \(\R^2 = \C\)
 and setting
-\[\Hol \coloneqq \{f\colon U \to \C \:\vert\: \text{\(U \subsetopen \C\), \(f\) holomorphic}\}\]
+\[	\Hol \coloneqq
+	\{f\colon U \to \C \:\vert\:
+		\text{\(U \subsetopen \C\),
+		\(f\) holomorphic}
+	\}
+\]
 we obtain the definition of a \RS.
 
 \begin{defi}
 	A \defn{\RS} is a \(\Hol\)-manifold.
 \end{defi}
 
-\begin{rem}
-	Since we have
-	\(\Hol \subset \{f \in \smooth(U, \R^2) \:\vert\: U \subsetopen \R^2\}\),
-	any \RS is a smooth two-dimensional real manifold,
-	\ie a surface.
-\end{rem}
+Since we have
+\(\Hol \subset \{f \in \smooth(U, \R^2) \:\vert\: U \subsetopen \R^2\}\),
+any \RS is a smooth two-dimensional real manifold,
+\ie a surface.
+
+\section{Why is a \RS?}
+
+We give a few, increasingly complex\footnote{pun intended}
+examples of \RSs.
 
 \begin{bsp}
-We give a few, increasingly complex (pun intended)
-examples and constructions for \RSs.
+Most likely the easiest and most well-known constructions of \RSs
+are the following four.
 \begin{itemize}
 \item \(\C\) is a \RS.
 \item Any open subset \(U \subsetopen M\) of a \RS \(M\) is a \RS itself.
-\item The Riemann Sphere \(\hat\C = \C \cup \{\infty\}\) is a \RS.
+\item The Riemann Sphere \(\hat\C = \C \cup \{\infty\} = \S^2\) is a \RS.
 \item Suitable quotients of \RSs are \RSs,
 	\eg the Torus \(\C / (\Z + \i\Z)\).
-\item We can associate \RSs to holomorphic functions.
+\end{itemize}
+\end{bsp}
+
+\begin{bsp}
+	We can associate \RSs to holomorphic functions.
 	For example,
 	we would like to define the natural logarithm
 	of any \(z = r\e^{\i\theta} \neq 0\)
-	with \(r > 0\) and \(\theta \in \R\) by
+	awith \(r > 0\) and \(\theta \in \R\) by
 	\[
 		\ln(z)
 		= \ln(r\e^{\i\theta})
@@ -85,7 +97,10 @@ examples and constructions for \RSs.
 	\]
 	For the other,
 	we need \RSs to “unfold the complex plane”.
-\item Projective non-singular curves are \RSs.
+\end{bsp}
+
+\begin{bsp}
+	Projective non-singular curves are \RSs.
 	For example, we can take the polynomial equation
 	\[y^2 = x^3+ax+b\]
 	with parameters \(a\) and \(b\)
@@ -95,8 +110,9 @@ examples and constructions for \RSs.
 	\(S\) is an algebraic subvariety of \(\Proj\C2\)
 	and whenever \(S\) has no singularities,
 	it is a \RS.
-\end{itemize}
 \end{bsp}
+
+\section{How is a \RS?}
 
 To conclude our initial tour of \RSs,
 we consider alternative ways
