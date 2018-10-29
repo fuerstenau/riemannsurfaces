@@ -2,18 +2,22 @@
 
 \section{What is a \RS?}
 
-A \RS is a one-dimensional complex manifold.
+A \RS is not a surface with a Riemannian metric,
+but it is a one-dimensional complex manifold.
 
+% TODO: Condense and move rigorous def into chapter 3
 \begin{defi}
 	A \defn{manifold} is a topological space
 	which is Hausdorff, second-countable and locally Euclidean
 	together with an atlas \(\mathcal A\)
 	of charts \(\alpha = (\U\alpha, \uphi\alpha)\)
 	consisting of an open set \(\U\alpha\)
-	and a homeomorphism
+	and a map
 	\[\uphi\alpha\colon \U\alpha \to \R^n\]
-	each and
-	such that \(M = \bigcup_\alpha \U\alpha\) is covered.
+	which is homeomorphic
+	onto its image \(\uphi\alpha[\U\alpha] \subsetopen \R^n\)
+	each
+	and such that \(M = \bigcup_\alpha \U\alpha\) is covered.
 
 	When the \defn{transition maps}
 	\begin{align*}
@@ -27,6 +31,8 @@ A \RS is a one-dimensional complex manifold.
 	\(C \subseteq \{f\colon U \to \R^n \:\vert\: U \subsetopen \R^n\}\),
 	we call \((M, \mathcal A)\) a \(C\)-manifold.
 \end{defi}
+
+% TODO: Cool graphics
 
 By identifying \(\R^2 = \C\)
 and setting
@@ -42,6 +48,7 @@ we obtain the definition of a \RS.
 	A \defn{\RS} is a \(\Hol\)-manifold.
 \end{defi}
 
+% Why not “complex curve”?
 Since we have
 \(\Hol \subset \{f \in \smooth(U, \R^2) \:\vert\: U \subsetopen \R^2\}\),
 any \RS is a smooth two-dimensional real manifold,
@@ -59,8 +66,10 @@ are the following four.
 \item \(\C\) is a \RS.
 \item Any open subset \(U \subsetopen M\) of a \RS \(M\) is a \RS itself.
 \item The Riemann Sphere \(\hat\C = \C \cup \{\infty\} = \S^2\) is a \RS.
+	Topologically, it is the Alexandroff compactification of \(\C\).
 \item Suitable quotients of \RSs are \RSs,
 	\eg the Torus \(\C / (\Z + \i\Z)\).
+	% TODO: Cool graphics
 \end{itemize}
 \end{bsp}
 
@@ -69,7 +78,7 @@ are the following four.
 	For example,
 	we would like to define the natural logarithm
 	of any \(z = r\e^{\i\theta} \neq 0\)
-	awith \(r > 0\) and \(\theta \in \R\) by
+	with \(r > 0\) and \(\theta \in \R\) by
 	\[
 		\ln(z)
 		= \ln(r\e^{\i\theta})
@@ -131,5 +140,6 @@ There are various way to characterize this extra structure:
 \item[Hyperbolic] Using the Poincaré uniformization theorem,
 	it is possible to show
 	that “nearly all” Riemann surfaces are hyperbolic,
+	\ie have negative Gauß curvature,
 	which means that they are quotients of the hyperbolic space \(\H^2\).
 \end{description}
