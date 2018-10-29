@@ -1,0 +1,65 @@
+\chapter{Review of Complex Analysis}
+
+We will take some time to review complex analysis in one variable.
+
+\section{Holomorphic functions}
+
+Let \(f\colon U \to \C\) be a function
+defined on an open set \(U \subsetopen \C\)
+and \(z_0 \in U\) a point.
+The \(f\) is \defn{complex differentiable} at \(z_0\)
+iff the limit
+\[\lim_{z\to z_0} \frac{f(z) - f(z_0)}{z - z_0} \eqqcolon f'(z_0)\]
+exists.
+Decomposing \(f(z) = f(z_0) + f'(z_0)(z-z_0) + \landauo(z-z_0)\)
+and identifying \(\C = \R^2\)
+gives us that any complex differentiable function \(f\) is real differentiable
+and satisfies \[\diff_{z_0}f(h) = f'(z_0)\cdot h.\]
+
+\begin{prop}
+	A function \(f\colon U \to \C\) is complex differentiable
+	at \(z_0 \in U\)
+	iff \(f\colon U \to \R^2\) is real differentiable at \(z_0\)
+	with \(\diff_{z_0}f \in \lin(\R^2, \R^2)\) being \(\C\)-linear.
+\end{prop}
+
+\begin{defi}
+	A function \(f\colon U \to \C\) is \defn{holomorphic}
+	iff \(f\) is complex differentiable at every point in \(U\).
+\end{defi}
+
+Thinking of \(U\) as an open subset of \(\R^2\),
+we can define \(\partq z \coloneqq \frac12(\partq x - \i\partq y)\)
+and \(\partq{\bar z} \coloneqq \frac12(\partq x + \i\partq y)\).
+Since \(\partq[f]{\bar z}\) is equivalent to the Cauchy-Riemann equations,
+we obtain another characterization of holomorphy.
+
+\begin{prop}
+	A function \(f\colon U \to \C\) is holomorphic
+	iff \(f\) is real differentiable
+	and \(\partq[f]{\bar z} = 0\) vanishes.
+\end{prop}
+
+Another characterization arises from the notion of an (oriented) angle.
+
+\begin{defi}
+	A function is called \defn{conformal} iff it preserves oriented angles.
+\end{defi}
+
+\begin{prop}
+	A function is holomorphic iff it is conformal.
+\end{prop}
+
+\section{Power series}
+
+% TODO: Power series stuff
+
+\section{Cauchy theory}
+
+A \defn{\(1\)-form} is a function of the form
+\(\alpha = a(x, y)\diff x + b(x, y) \diff y\)
+for functions \(a, b\colon U \to \C\)
+or, equivalently, a function of the form
+\(\alpha = u(z)\diff z + v(z)\diff\bar z\)
+with \(u, v\colon U \to \C\),
+\(\diff z = \diff x + \i\diff y\) and \(\diff\bar z = \diff x - \i\diff y\).
